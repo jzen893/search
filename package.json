@@ -8,7 +8,8 @@
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test:spec": "stencil test --spec --watchAll",
-    "test.watch": "stencil test --spec --e2e --watchAll"
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "lint": "tslint --project tsconfig.json 'src/**/*.tsx'"
   },
   "dependencies": {
     "@stencil/core": "~1.0.7",
@@ -21,7 +22,9 @@
     "@types/puppeteer": "1.12.4",
     "jest": "24.8.0",
     "jest-cli": "24.8.0",
-    "jest-mock-axios": "'~'3.0.0",
-    "puppeteer": "1.17.0"
+    "jest-mock-axios": "~3.0.0",
+    "puppeteer": "1.17.0",
+    "tslint": "'~'5.17.0",
+    "tslint-ionic-rules": "0.0.21"
   }
 }

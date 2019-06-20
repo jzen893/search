@@ -1,5 +1,5 @@
-import {Component, Event, EventEmitter, h, State} from '@stencil/core';
-import search, {Category} from "../../global/search";
+import { Component, Event, EventEmitter, State, h } from '@stencil/core';
+import search, { Category } from '../../global/search';
 
 @Component({
   tag: 'app-search',
@@ -16,7 +16,7 @@ export class AppSearch {
 
   @State() field: string;
 
-  @State() error: boolean = false;
+  @State() error = false;
 
   textInput: HTMLInputElement;
 

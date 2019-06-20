@@ -1,5 +1,5 @@
-import {Component, h, Listen, State} from '@stencil/core';
-import search from "../../global/search";
+import { Component, Listen, State, h } from '@stencil/core';
+import search from '../../global/search';
 
 
 @Component({

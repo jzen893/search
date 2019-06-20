@@ -1,4 +1,4 @@
-import { Component, h, Prop, Watch, State } from '@stencil/core';
+import { Component, Prop, State, Watch, h } from '@stencil/core';
 
 @Component({
   tag: 'app-results',
@@ -13,7 +13,7 @@ export class AppResults {
     this.hasSearched = true;
   }
 
-  @State() hasSearched: boolean = false;
+  @State() hasSearched = false;
 
   render() {
 
@@ -43,10 +43,10 @@ export class AppResults {
             </form>
             </li>
         )}
-      </ul></div>)
+      </ul></div>);
     }
 
-      return (
+    return (
         <div class="alert alert-primary" role="alert">
           <h3>No results found!</h3>
         </div>
