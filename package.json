@@ -24,7 +24,7 @@
     "jest-cli": "24.8.0",
     "jest-mock-axios": "~3.0.0",
     "puppeteer": "1.17.0",
-    "tslint": "'~'5.17.0",
+    "tslint": "~5.17.0",
     "tslint-ionic-rules": "0.0.21"
   }
 }

@@ -90,16 +90,24 @@ export class Search {
     }
   }
 
+  /**
+   * Gets all searchable fields for a given category
+   */
   getFieldsForCategory(category: Category): string[] {
     const data = this.getDataForCategory(category);
     if (data.length > 0) {
-      return Object.keys(data[0]).sort((a, b) => {
+      return Object.keys(data[0]).filter((key) => {
+        return (typeof data[0][key] !== 'boolean');
+      }).sort((a, b) => {
         return a.localeCompare(b);
       });
     }
     return [];
   }
 
+  /**
+   * Appends related data to each item in given array
+   */
   addRelatedData(data: any[]) {
     return data.map((item) => {
       if (item.hasOwnProperty('organization_id')) {

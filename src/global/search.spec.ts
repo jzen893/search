@@ -108,22 +108,10 @@ describe('search', () => {
   });
 
   describe('getFieldsForCategory', () => {
-    it('should return tickets keys for ticket category', () => {
-      expect(search.getFieldsForCategory(Category.tickets)).toEqual(Object.keys(tickets[0]).sort((a, b) => {
-        return a.localeCompare(b);
-      }));
-    });
 
-    it('should return orgs keys for organizations category', () => {
-      expect(search.getFieldsForCategory(Category.organizations)).toEqual(Object.keys(organizations[0]).sort((a, b) => {
-        return a.localeCompare(b);
-      }));
-    });
-
-    it('should return users keys for users category', () => {
-      expect(search.getFieldsForCategory(Category.users)).toEqual(Object.keys(users[0]).sort((a, b) => {
-        return a.localeCompare(b);
-      }));
+    it('should return all non-boolean fields for users', () => {
+      expect(search.getFieldsForCategory(Category.users)).toEqual(['_id', 'alias', 'created_at', 'email',  'external_id',  'last_login_at',
+      'locale', 'name', 'organization_id',  'phone',  'role', 'signature',  'tags', 'timezone','url']);
     });
 
     it('should return empty array if no data exists found', () => {
@@ -160,7 +148,7 @@ describe('search', () => {
   describe('search', () => {
     it('should return result from fuse search', () => {
       const results = search.search(Category.tickets, 'subject', 'korea');
-      expect(results).toEqual([{dog: true}]);
+      expect(results).toEqual(tickets);
     });
 
     it('should throw error if category or field is not set', () => {

@@ -1,10 +1,13 @@
 export default class Fuse {
-  constructor(list, options) {
 
+  list: [];
+
+  constructor(list, options) {
+    this.list = list;
   }
 
   search(term) {
-    return [{dog: true}];
+    return this.list;
   }
 
 };

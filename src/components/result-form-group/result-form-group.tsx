@@ -20,7 +20,7 @@ export class ResultFormGroup {
     }
 
   return (<div class="form-group row">
-        <label htmlfor={this.label} class="col-sm-2 col-form-label">{this.label}</label>
+    <label htmlfor={this.label} class="col-sm-2 col-form-label"><b>{this.label}</b></label>
         <div class="col-sm-10">
           <input type="text" readonly class="form-control-plaintext" id={this.label} value={this.value} />
         </div>

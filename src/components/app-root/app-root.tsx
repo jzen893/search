@@ -30,7 +30,7 @@ export class AppRoot {
 
         <main class="container">
           <div class="row h-100">
-            <div class="col-sm-3">
+            <div class="col-sm-3 pt-2">
               <app-search/>
             </div>
             <div class="col-sm-9 h-100 pt-2 overflow-auto">
