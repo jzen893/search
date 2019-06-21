@@ -6,6 +6,9 @@ returning results in a human readable format.
 When executing a search operation, where data exists, values from any 
 related entities should be included in the results.
 
+The search uses [Fuse.js](https://fusejs.io/), which means the search is 
+fuzzy, but it also means there is no searching on boolean fields.
+
 ## Getting Started
 
 Prerequisites: [Node.js](https://nodejs.org/en/) (>=10.0.0).
