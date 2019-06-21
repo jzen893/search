@@ -9,11 +9,19 @@ describe('app-search', () => {
     expect(element).toHaveClass('hydrated');
   });
 
-  it('displays search button', async () => {
+  it('displays form fields and search button', async () => {
     const page = await newE2EPage({ url: '/' });
 
     const profileElement = await page.find('app-search');
-    const element = profileElement.querySelector('button');
+
+    const categoryElement = await profileElement.find('#category');
+    expect(categoryElement).not.toBeNull();
+
+    const fieldsElement = await profileElement.find('#fields');
+    expect(fieldsElement).not.toBeNull();
+
+    const element = await profileElement.find('button');
     expect(element.textContent).toContain('Search');
   });
+
 });

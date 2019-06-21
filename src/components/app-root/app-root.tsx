@@ -13,7 +13,6 @@ export class AppRoot {
 
   @Listen('searchCompleted')
   searchCompletedHandler(event: CustomEvent) {
-    console.log('Received the custom searchCompleted event: ', event.detail);
     this.searchResults = [...event.detail];
   }
 
