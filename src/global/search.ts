@@ -138,7 +138,7 @@ export class Search {
 
     const options = {
       shouldSort: true,
-      threshold: 0.3,
+      threshold: 0.5,
       location: 0,
       distance: 100,
       maxPatternLength: 32,
