@@ -7,6 +7,7 @@ import { Component, Prop, State, Watch, h } from '@stencil/core';
 })
 export class AppResults {
 
+  
   @Prop() searchResults: any[];
   @Watch('searchResults')
   watchHandler() {

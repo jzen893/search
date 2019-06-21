@@ -8,6 +8,8 @@ related entities should be included in the results.
 
 ## Getting Started
 
+Prerequisites: [Node.js](https://nodejs.org/en/) (>=10.0.0).
+
 To get started, clone this repo to a new directory and run:
 
 ```bash
